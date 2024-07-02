@@ -11,10 +11,6 @@ const adminRouter = require("../routes/admin");
 const userRouter = require("../routes/user");
 
 // Error Handling Middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: "Internal Server Error" });
-});
 
 // Connect to the database
 connectToDb()
