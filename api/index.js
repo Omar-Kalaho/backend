@@ -1,14 +1,14 @@
 const express = require("express");
-const { connectToDb } = require("./db");
+const { connectToDb } = require("../db");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
 app.use(cors());
 
-const studentRouter = require("./routes/student");
-const adminRouter = require("./routes/admin");
-const userRouter = require("./routes/user");
+const studentRouter = require("../routes/student");
+const adminRouter = require("../routes/admin");
+const userRouter = require("../routes/user");
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
