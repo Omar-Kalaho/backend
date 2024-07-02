@@ -20,9 +20,8 @@ app.use((err, req, res, next) => {
 connectToDb()
   .then(() => {
     // Middleware
-    app.use(bodyParser.json({ limit: "10mb" }));
-    app.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
-    
+
+    app.use(express.static("public"));
 
     app.use((req, res, next) => {
       console.log(req.path, req.method);
